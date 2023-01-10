@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/carrousel.css">
     <title>Accueil</title>
 </head>
@@ -18,7 +18,7 @@
     <header class="main-head">
         <a href="index.html">
             <div class="headder-text">
-            <h1>Renaissance Italienne</h1>
+            <h1>Renaissance </br>Italienne</h1>
             </div>
         </a>
     </header>
@@ -41,8 +41,9 @@
             <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+ 
             [...$refs.parent.children] .find(e=>e.getBoundingClientRect().x>=0) .id"> <div id="ecran-1" 
             class="carrousel_ecran">
-                <figure> <img src="public/img/carrousel/michelange1 1.webp" alt="image michel ange 1"> </figure> 
-               </div> <div id="ecran-2" class="carrousel_ecran"> <figure>
+                <figure> <a href="jugement-dernier.html"><img src="public/img/carrousel/michelange1 1.webp" alt="image michel ange 1"></a>
+                </figure> </div> 
+            <div id="ecran-2" class="carrousel_ecran"> <figure>
                 <img src="public/img/carrousel/michelange2 1.webp" alt="image michel-ange 2">
             </figure> </div> 
             <div id="ecran-3" class="carrousel_ecran"> <figure> 
