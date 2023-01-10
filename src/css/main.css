@@ -1,0 +1,63 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+}
+
+.main-head{
+    position: fixed;
+    background-color: #BB1313;
+    width: 100%;
+}
+
+.headder-text {
+    font-family: 'Italianno', cursive;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+    color: #CEB428;
+    font-weight: 400;
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+p{
+    font-family: 'Italianna', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+}
+
+h2{
+    font-family: 'Italianno', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 28px;
+}
+
+h3{
+    font-family: 'Italianno', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 28px;
+}
+
+h4{
+    font-family: 'Italianno', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+}
