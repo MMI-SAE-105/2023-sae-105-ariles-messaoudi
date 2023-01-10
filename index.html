@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -30,6 +31,36 @@
         Avec la peinture de la Haute Renaissance, certains considèrent que l'art occidental atteint son apogée et 
         apporte des oeuvres d’art d'une portée universelle.
     </p>
+
+    <h3 class="titre-carrousel">Tableaux en exposition</h3>
+    <div class="carrousel-a">
+        <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
+            <button @click="const p =$refs.parent ; p.scrollLeft-= p.clientWidth" class="carrousel_btn carrousel_btn-avant" 
+            aria-label="slide précedant">&lt;</button><button @click="const p =$refs.parent ; p.scrollLeft+= p.clientWidth" 
+            class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+ 
+            [...$refs.parent.children] .find(e=>e.getBoundingClientRect().x>=0) .id"> <div id="ecran-1" 
+            class="carrousel_ecran">
+                <figure> <img src="public/img/carrousel/michelange1 1.webp" alt="image michel ange 1"> </figure> 
+               </div> <div id="ecran-2" class="carrousel_ecran"> <figure>
+                <img src="public/img/carrousel/michelange2 1.webp" alt="image michel-ange 2">
+            </figure> </div> 
+            <div id="ecran-3" class="carrousel_ecran"> <figure> 
+                <img src="public/img/carrousel/devinci1 1.webp" alt="image léonard de vinci 1"> </figure> </div> 
+            <div id="ecran-4" class="carrousel_ecran"> <figure> 
+                <img src="public/img/carrousel/devinci2 1.webp" alt="image léonard de vinci 2"> </figure> </div> 
+            <div id="ecran-5" class="carrousel_ecran"> <figure> 
+                <img src="public/img/carrousel/bellini1 1.webp" alt="image bellini 1"> </figure> </div> 
+            <div id="ecran-6" class="carrousel_ecran"> <figure> 
+                <img src="public/img/carrousel/bellini2 1.webp" alt="image bellini 2"> </figure>
+             </div> 
+            </div> 
+        </div> 
+    </div>
+
+        </div>
+
+    </div>
 
     <h2>Artiste</h2>
 

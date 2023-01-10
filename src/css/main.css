@@ -40,6 +40,14 @@ p{
     padding-right: 15px;
 }
 
+h1{
+    font-family: 'Italianno', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+}
+
 h2{
     font-family: 'Italianno', cursive;
     font-weight: 400;
@@ -90,5 +98,3 @@ h4{
     font-size: 32px;
     line-height: 28px;
 }
-
-
