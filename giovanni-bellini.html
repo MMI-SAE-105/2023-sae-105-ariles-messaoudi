@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
     <title>Giovanni Bellini</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <h1>Renaissance Italienne</h1>
-        </a>
-    </header>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
 
-    <h2>Giovanni Bellini (1430-1516)</h2>
+    <h2>Giovanni Bellini </br></br>(1430-1516)</h2>
+
+    <div class="image-portrait">
+        <img src="public/img/portrait/bellini-portrait.webp" alt="portrait de Giovanni Bellini">
+    </div>
 
     <p>Giovanni Bellini dit Giambellino et, en vénitien, Zambellin (né à Venise, entre 1425 et 1433 - Venise, 29 novembre 1516),
          est un peintre italien de la Renaissance, considéré comme le précurseur de l'école vénitienne, 
@@ -32,20 +47,31 @@
         sur un fond de paysage où l’on reconnaît la campagne ou les collines de Vénétie.
     </p>
 
-    <h3>Ces oeuvres</h3>
-
-    <a href="saint-marc.html">
-        <h4>- Saint Marc prêchant à Alexandrie</h4>
-    </a>
-
-    <a href="transfiguration.html">
-        <h4>- La Transfiguration</h4>
-    </a>
+    
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">Ces oeuvres</button>
+         
+            <span x-show="open" x-transition>
+                <a href="saint-marc.html">
+                    <h4>- Saint Marc prêchant à Alexandrie</h4>
+                </a>
+            
+                <a href="transfiguration.html">
+                    <h4>- La Transfiguration</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
     <a href="frise.html">
-        <button
+        <button class="favorite styled"
         type="button">
+        <div class="texte-bouton">
             Frise
+        </div>
         </button>
     </a>
 
