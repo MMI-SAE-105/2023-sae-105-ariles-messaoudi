@@ -23,6 +23,17 @@
         <button class="headermenu-btn menu-btn" @click="menuIsOpen = !menuIsOpen">
             <span class="menu-btnbar"></span>
         </button>
+        <nav class="header_menu menu" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu-list">
+                <li class="menu_item">
+                    <a class="menu_link" href="../fr/index.html">Accueil</a>
+                </li>
+                
+            </ul>
+
+        </nav>
+
+
 
             <div class="headder-text">
                 <a href="../fr/index.html">
