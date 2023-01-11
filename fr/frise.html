@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen:false }"></html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 
 
+    <link rel="stylesheet" href="../src/css/menu.css">
     <link rel="stylesheet" href="../src/css/normalize.css">
     <link rel="stylesheet" href="../src/css/main.css">
     <link rel="stylesheet" href="../src/css/carrousel.css">
@@ -19,12 +20,46 @@
 </head>
 <body>
     <header class="main-head">
-        <div class="headder-text">
-            <a href="../fr/index.html">
-        <h1>Renaissance </br>Italienne</h1>
-        </div>
-    </a>
-</header>
+
+        <button class="header_menu btndumenu" @click="menuIsOpen = ! menuIsOpen">
+            <img aria-controls="mainNav" src="../public/img/icone/icone.svg" alt="Icone de menu">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+    
+            <button class="icon_cross_menu imgcross" @click="menuIsOpen = ! menuIsOpen">
+                <img class="icon_cross_menu" src="../public/img/icone/quitter.svg" alt="Icone croix pour quitter le menu">
+            </button>
+            <ul class="liste_li">
+                <li><a href="../fr/index.html" style="color: #CEB428" class="textmenu"><h1>Accueil</h1></a></li>
+                <hr>
+                <li><a href="../fr/billetterie.html" style="color: #CEB428" class="textmenu"><h1 class="textmenu">Billetterie</h1></a></li>
+                <hr>                  
+                    <section x-data="{open:false}">
+                        <li><a style="color: #CEB428" @click="open = !open" class="textmenu"><h1>Artistes</h1></a></li>
+                        <hr>                      
+                            <h2 x-show="open" x-transition.duration.700ms>                      
+                                <a href="billeterie.html" class="text_accordeon">                        
+                                    <li><a href="../fr/michel-ange.html" style="color: #CEB428" class="textmenu1"><p class="textmenu1">Michel-Ange</p></a></li>
+                                    <li><a href="../fr/leonard-de-vinci.html" style="color: #CEB428" class="textmenu1"><p class="textmenu1">Léonard de Vinci</p></a></li>
+                                    <li><a href="../fr/giovanni-bellini.html" style="color: #CEB428" class="textmenu1"><p class="textmenu1">Giovanni Bellini</p></a></li>
+                                    <li><a href="../fr/jules-romain.html" style="color: #CEB428" class="textmenu1"><p class="textmenu1">Jules Romain</p></a></li>                  
+                                </a>     
+                            </h2>
+                    </section>
+            </ul>
+            <ul class="liste_liii">
+                <li><a href="../fr/contact.html" style="color: #CEB428"  class="textmenu"><h1>Contact</h1></a></li>
+                <hr>
+            </ul> 
+        </nav>
+
+
+            <div class="headder-text">
+                <a href="../fr/index.html">
+            <h1>Renaissance </br>Italienne</h1>
+            </div>
+                </a>
+    </header>
 
 
 
