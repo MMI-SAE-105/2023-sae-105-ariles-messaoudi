@@ -49,21 +49,31 @@
         le palais de Filippo Adimari (aujourd'hui palais Adimari Salviati), sa première œuvre personnelle d'architecture. 
         En 1521, il construit la villa Lante sur le Janicule.
     </p>
-
-    <h3>Ces oeuvres</h3>
-
-    <a href="saint-michel.html">
-        <h4>- Saint Michel terrassant le démon</h4>
-    </a>
-
-    <a href="triomphe-de-titus.html">
-        <h4>- Le Triomphe de Titus et de Vespasien</h4>
-    </a>
+    
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">Ces oeuvres</button>
+         
+            <span x-show="open" x-transition>
+                <a href="saint-michel.html">
+                    <h4>- Saint Michel terrassant le démon</h4>
+                </a>
+            
+                <a href="triomphe-de-titus.html">
+                    <h4>- Le Triomphe de Titus et de Vespasien</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
     <a href="frise.html">
-        <button
+        <button class="favorite styled"
         type="button">
+        <div class="texte-bouton">
             Frise
+        </div>
         </button>
     </a>
 
