@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
     <title>Le Triomphe de Titus et de Vespasien</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <h1>Renaissance Italienne</h1>
-        </a>
-    </header>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
 
-    <h2>Le Triomphe de Titus et de Vespasien (1537)</h2>
+    <h2>Le Triomphe de Titus </br></br>et de Vespasien </br></br>(1537)</h2>
+
+    <div class="image-portrait">
+        <img src="public/img/carrousel/romain2 1.webp" alt="Le Triomphe de Titus et de Vespasien de Jules Romain">
+    </div>
 
     <p>Commandé vers 1537 par Federico Gonzague, duc de Mantoue, pour le cabinet des Césars, dans l’appartement de Troie 
         du palais ducal de Mantoue ; cette décoration comprenait onze portraits d’empereurs romains peints par Titien 
@@ -26,24 +41,44 @@
         coll. Everhard Jabach, à Paris, avant 1661 ; acquis auprès de celui-ci pour la coll. de Louis XIV, en 1662.
     </p>
 
-    <h3>L'artiste</h3>
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="jules-romain.html">
+                    <h4>Jules Romain</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
-    <a href="jules-romain.html">
-        <h4>Jules Romain</h4>
-    </a>
 
-    <h3>Autres oeuvres de l’artiste</h3>
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="saint-michel.html">
+                        <h4>- Saint Michel terrassant le démon</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
 
-    <a href="saint-michel.html">
-        <h4>- Saint Michel terrassant le démon</h4>
-    </a>
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
 
-    <a href="frise.html">
-        <button
-        type="button">
-            Frise
-        </button>
-    </a>
 
     <footer>
         <a href="contact.html">
