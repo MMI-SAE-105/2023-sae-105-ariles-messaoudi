@@ -117,3 +117,12 @@ h4{
     margin: auto;
     justify-content: center;
 }
+
+h5{
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 28px;
+    font-style: normal;
+    text-align: left;
+}
