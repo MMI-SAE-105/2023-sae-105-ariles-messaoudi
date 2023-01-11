@@ -41,20 +41,31 @@
         Bologne et Venise et passe les dernières années de sa vie en France, à l'invitation du roi François Ier.
     </p>
 
-    <h3>Ces oeuvres</h3>
-
-    <a href="la-joconde.html">
-        <h4>- La Joconde</h4>
-    </a>
-
-    <a href="la-cene.html">
-        <h4>- La Cène</h4>
-    </a>
+    
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">Ces oeuvres</button>
+         
+            <span x-show="open" x-transition>
+                <a href="la-joconde.html">
+                    <h4>- La Joconde</h4>
+                </a>
+            
+                <a href="la-cene.html">
+                    <h4>- La Cène</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
     <a href="frise.html">
-        <button
+        <button class="favorite styled"
         type="button">
+        <div class="texte-bouton">
             Frise
+        </div>
         </button>
     </a>
 
