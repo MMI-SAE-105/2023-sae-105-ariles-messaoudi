@@ -131,8 +131,12 @@ h5{
 .main-foot{
     background-color: #BB1313;
     width: 100%;
+    display: flex;
 }
 
 .icone{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
 }
