@@ -49,25 +49,45 @@
         dans la Grande Galerie du Louvre.
     </p>
 
-    <h3>L'artiste</h3>
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="jules-romain.html">
+                    <h4>Jules Romain</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
-    <a href="jules-romain.html">
-        <h4>Jules Romain</h4>
-    </a>
 
-    <h3>Autres oeuvres de l’artiste</h3>
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="triomphe-de-titus.html">
+                        <h4>- Le Triomphe de Titus et de Vespasien</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
 
-    <a href="triomphe-de-titus.html">
-        <h4>- Le Triomphe de Titus et de Vespasien</h4>
-    </a>
-
-    <a href="frise.html">
-        <button
-        type="button">
-            Frise
-        </button>
-    </a>
-
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
+            
+            
     <footer>
         <a href="contact.html">
             <h2>Nous contacter</h2>
