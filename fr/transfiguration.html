@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
+    <title>La Transfiguration</title>
+</head>
+<body>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
+
+    <h2>La Transfiguration </br></br>(1480)</h2>
+
+    <div class="image-portrait">
+        <img src="public/img/carrousel/bellini2 1.webp" alt="La Transfiguration de Giovanni Bellini">
+    </div>
+
+    <p>La Transfiguration du Christ est une peinture à l'huile sur panneau réalisée au début des années 1480 
+        par le peintre italien de la Renaissance Giovanni Bellini. L'œuvre est conservée au musée de Capodimonte à Naples.
+    </p>
+
+    <p>À cette époque, Bellini avait déjà abandonné l'art gothique et dépassé l'influence de son maître Andrea Mantegna. 
+        L'œuvre montre ainsi un style moins rigide et plus épanoui que sa précédente Transfiguration (musée Correr, Venise). 
+        La peinture est signée IOANNES BELLINUS sur un cartellino accroché sur la clôture du premier plan. 
+        Les feuilles de l'arbre sur la droite, ainsi que les visages de Jacques et Pierre, sont postérieures à la restauration.
+    </p>
+
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="giovanni-bellini.html">
+                    <h4>Giovanni Bellini</h4>
+                </a>
+            </span>
+        </div>
+        </section>
+
+
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="saint-marc.html">
+                        <h4>- Saint Marc prêchant à Alexandrie</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
+
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
+
+
+    <footer>
+        <a href="contact.html">
+            <h2>Nous contacter</h2>
+        </a>
+
+        <a href="https://www.fondationcartier.com/">
+            <h2>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h2>
+        </a>
+        <a href="https://twitter.com/?lang=fr"><img src="public/img/icone/twitter.svg" alt="lien twitter"></a>
+        <a href="https://www.instagram.com/?hl=fr"><img src="public/img/icone/instagram.svg" alt="lien instagram"></a>
+        <a href="https://www.youtube.com/"><img src="public/img/icone/youtube.svg" alt="lien youtube"></a>
+        <a href="mailto:fondation-cartier@fondation.cartier.com"><img src="public/img/icone/mail.svg" alt="lien mail"></a>
+    </footer>
+</body>
+</html>

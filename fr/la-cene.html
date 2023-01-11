@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
+    <title>La Cène</title>
+</head>
+<body>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
+
+    <h2>La Cène (1498)</h2>
+
+    <div class="image-portrait">
+        <img src="public/img/carrousel/devinci2 1.webp" alt="La Cène de Léonard de Vinci">
+    </div>
+
+    <p>La Cène (en italien : L'Ultima Cena, soit « le Dernier Repas ») de Léonard de Vinci est une peinture murale 
+        à la détrempe de 460 × 880 cm, réalisée de 1495 à 1498 pour le réfectoire du couvent dominicain de Santa Maria 
+        delle Grazie à Milan.
+    </p>
+
+    <p>Léonard a représenté la Cène, dernier repas de Jésus de Nazareth avec ses douze apôtres, le jeudi saint, 
+        veille de sa crucifixion. Il suit là une vieille tradition monastique. Depuis le Moyen Âge les murs des réfectoires 
+        sont illustrés de la Cène. « Ainsi, durant leur repas, les moines avaient-ils sous les yeux, (…) 
+        l’image de celui que partagea leur Seigneur pour la dernière fois ». Grâce à une copie contemporaine de la Cène, 
+        nous pouvons identifier chacun des personnages. Il s’agit, de gauche à droite, de Barthélemy, 
+        Jacques le Mineur, André, Judas (tenant une bourse), Pierre, Jean, Jésus, Thomas, Jacques le Majeur, Philippe,
+         Matthieu, Thaddée et Simon. La fresque est surmontée des trois blasons de la dynastie des Sforza. 
+         Au centre celui de Ludovic Sforza et de son épouse, Béatrice d’Este, à gauche, celui de son fils aîné, 
+         Massimilo et à droite, celui de son autre fils, François.
+    </p>
+
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="leonard-de-vinci.html">
+                    <h4>Léonard de Vinci</h4>
+                </a>
+            </span>
+        </div>
+        </section>
+
+
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="la-joconde.html">
+                        <h4>- La Joconde</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
+
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
+
+
+    <footer>
+        <a href="contact.html">
+            <h2>Nous contacter</h2>
+        </a>
+
+        <a href="https://www.fondationcartier.com/">
+            <h2>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h2>
+        </a>
+        <a href="https://twitter.com/?lang=fr"><img src="public/img/icone/twitter.svg" alt="lien twitter"></a>
+        <a href="https://www.instagram.com/?hl=fr"><img src="public/img/icone/instagram.svg" alt="lien instagram"></a>
+        <a href="https://www.youtube.com/"><img src="public/img/icone/youtube.svg" alt="lien youtube"></a>
+        <a href="mailto:fondation-cartier@fondation.cartier.com"><img src="public/img/icone/mail.svg" alt="lien mail"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+
+    <link rel="stylesheet" href="../src/css/normalize.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/carrousel.css">
+    <title>Accueil</title>
+</head>
+<body>
+    <header class="main-head">
+            <div class="headder-text">
+                <a href="../index.html">
+            <h1>Renaissance </br>Italienne</h1>
+            </div>
+        </a>
+    </header>
+
+    <p>La Haute Renaissance est une période artistique du Cinquecento qui se situe dans 
+        la continuité de la Première Renaissance.
+    </p>
+
+    <p>Elle fait référence à l'art de la Rome papale, de Florence et de la république de Venise de 1500 à 1530. 
+        Avec la peinture de la Haute Renaissance, certains considèrent que l'art occidental atteint son apogée et 
+        apporte des oeuvres d’art d'une portée universelle.
+    </p>
+
+    <h3 class="titre-carrousel">Tableaux en exposition</h3>
+    <div class="carrousel-a">
+        <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
+            <button @click="const p =$refs.parent ; p.scrollLeft-= p.clientWidth" class="carrousel_btn carrousel_btn-avant" 
+            aria-label="slide précedant">&lt;</button><button @click="const p =$refs.parent ; p.scrollLeft+= p.clientWidth" 
+            class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+ 
+            [...$refs.parent.children] .find(e=>e.getBoundingClientRect().x>=0) .id"> <div id="ecran-1" 
+            class="carrousel_ecran">
+                <figure><a href="jugement-dernier.html"><img src="public/img/carrousel/michelange1 1.webp" 
+                    alt="Page tableau Le Jugement dernier"></a></figure> </div> 
+            <div id="ecran-2" class="carrousel_ecran"> 
+                <figure><a href="creation-adam.html"><img src="public/img/carrousel/michelange2 1.webp" 
+                    alt="Page tableau La Création d'Adam"></a></figure> </div> 
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure><a href="la-joconde.html"><img src="public/img/carrousel/devinci1 1.webp" 
+                    alt="Page tableau La Joconde"></a></figure> </div> 
+            <div id="ecran-4" class="carrousel_ecran"> 
+                <figure><a href="la-cene.html"><img src="public/img/carrousel/devinci2 1.webp" 
+                    alt="Page tableau La Cène"></a></figure> </div> 
+            <div id="ecran-5" class="carrousel_ecran"> 
+                <figure><a href="saint-marc.html"><img src="public/img/carrousel/bellini1 1.webp" 
+                    alt="Page tableau Saint Michel terrassant le démon"> </figure></a></div>
+            <div id="ecran-6" class="carrousel_ecran"> 
+                <figure><a href="transfiguration.html"><img src="public/img/carrousel/bellini2 1.webp" 
+                    alt="La transfiguration"></a></figure></div>
+            <div id="ecran-7" class="carrousel_ecran"> 
+                <figure><a href="saint-michel.html"><img src="public/img/carrousel/romain1 1.webp" 
+                    alt="Page tableau Saint Michel terrassant le démon"> </figure></a></div>
+            <div id="ecran-8" class="carrousel_ecran"> 
+                <figure><a href="triomphe-de-titus.html"><img src="public/img/carrousel/romain2 1.webp" 
+                    alt="Le Triomphe de Titus et de Vespasien"></a></figure></div>
+            </div> 
+        </div> 
+    </div>
+
+        </div>
+
+    </div>
+
+    <h2>Artiste</h2>
+
+    <a href="michel-ange.html">
+        <h3>Michel-Ange</h3>
+    </a>
+    
+    <a href="jugement-dernier.html">
+        <h4>- Le Jugement dernier</h4>
+    </a>
+
+    <a href="creation-adam.html">
+        <h4>- La Création d’Adam</h4>
+    </a>
+
+    <a href="leonard-de-vinci.html">
+        <h3>Léonard de Vinci</h3>
+    </a>
+
+    <a href="la-joconde.html">
+        <h4>- La Joconde</h4>
+    </a>
+
+    <a href="la-cene.html">
+        <h4>- La Cène</h4>
+    </a>
+
+    <a href="giovanni-bellini.html">
+        <h3>Giovanni Bellini</h3>
+    </a>
+
+    <a href="saint-marc.html">
+        <h4>- Saint Marc prêchant à Alexandrie</h4>
+    </a>
+
+    <a href="transfiguration.html">
+        <h4>- La Transfiguration</h4>
+    </a>
+
+    <a href="jules-romain.html">
+        <h3>Jules Romain</h3>
+    </a>
+
+    <a href="saint-michel.html">
+        <h4>- Saint Michel terrassant le démon</h4>
+    </a>
+
+    <a href="triomphe-de-titus.html">
+        <h4>- Le Triomphe de Titus et de Vespasien</h4>
+    </a>
+
+    <a href="frise.html">
+        <button class="favorite styled"
+        type="button">
+        <div class="texte-bouton">
+            Frise
+        </div>
+        </button>
+    </a>
+
+    <p>
+        Voici les informations concernant l’exposition temporaire :
+    </p>
+
+    <p>Dates de l’exposition : du 13 avril au 23 juin 2021
+        Lieu de l’exposition : Fondation Cartier, 261 Bd Raspail, 75014 Paris
+        Horaires d’ouverture : Tous les jours de 11h à 20h, sauf le lundi. Nocturne le mardi, jusqu'à 22h. 
+        La fermeture des salles débute à 19h45 (21h45 les mardis).
+    </p>
+
+    <p>Tarfis :
+        Plein tarif  11€
+        Tarif réduit  7,50€
+        Réduction 13 - 25 ans  5€
+        Fondation Cartier Pass  18€ - 50€
+        Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, 
+        Etudiants Gratuit
+    </p>
+
+    <a href="billetterie.html">
+        <button class="favorite styled"
+        type="button">
+        <div class="texte-bouton">
+            Billetterie
+        </div>
+        </button>
+    </a>
+
+    <footer class="main-foot">
+        <a href="contact.html">
+            <h5>Nous contacter</h5>
+        </a>
+
+        <a href="https://www.fondationcartier.com/">
+            <h5>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h5>
+        </a>
+
+        <div class="icone">
+            <a href="https://twitter.com/?lang=fr"><img src="public/img/icone/twitter.svg" alt="lien twitter"></a>
+            <a href="https://www.instagram.com/?hl=fr"><img src="public/img/icone/instagram.svg" alt="lien instagram"></a>
+            <a href="https://www.youtube.com/"><img src="public/img/icone/youtube.svg" alt="lien youtube"></a>
+            <a href="mailto:fondation-cartier@fondation.cartier.com"><img src="public/img/icone/mail.svg" alt="lien mail"></a>
+        </div>
+
+    </footer>
+</body>
+</html>
