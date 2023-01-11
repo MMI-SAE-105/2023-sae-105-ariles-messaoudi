@@ -46,25 +46,45 @@
          Massimilo et à droite, celui de son autre fils, François.
     </p>
 
-    <h3>L'artiste</h3>
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="leonard-de-vinci.html">
+                    <h4>Léonard de Vinci</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
-    <a href="leonard-de-vinci.html">
-        <h4>Léonard de Vinci</h4>
-    </a>
 
-    <h3>Autres oeuvres de l’artiste</h3>
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="la-joconde.html">
+                        <h4>- La Joconde</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
 
-    <a href="la-joconde.html">
-        <h4>- La Joconde</h4>
-    </a>
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
 
-    <a href="frise.html">
-        <button
-        type="button">
-            Frise
-        </button>
-    </a>
-
+            
     <footer>
         <a href="contact.html">
             <h2>Nous contacter</h2>
