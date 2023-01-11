@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
     <title>Michel-Ange</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <h1>Renaissance Italienne</h1>
-        </a>
-    </header>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
 
-    <h2>Michel-Ange (1475-1564)</h2>
+<div class="titre-page">
+    <h2>Michel-Ange </br></br>(1475-1564)</h2>
+</div>
+
+    <div class="image-portrait">
+        <img src="public/img/portrait/portrait-michel-ange.webp" alt="portrait de michel-ange">
+    </div>
 
     <p>Michel-Ange, de son vrai nom Michelangelo di Lodovico Buonarroti Simoni (simplement Michelangelo Buonarroti, 
         en italien), né le 6 mars 1475 à Caprese (République de Florence) et mort le 18 février 1564 à Rome 
@@ -28,15 +45,23 @@
         Ascanio Condivi en 1553. Une courte biographie par Paolo Giovio, Michaelis Angeli Vita paraît en 1527.
     </p>
 
-    <h3>Ces oeuvres</h3>
-
-    <a href="jugement-dernier.html">
-        <h4>- Le jugement dernier</h4>
-    </a>
-
-    <a href="creation-adam.html">
-        <h4>- La Création d’Adam</h4>
-    </a>
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">Ces oeuvres</button>
+         
+            <span x-show="open" x-transition>
+                <a href="jugement-dernier.html">
+                    <h4>- Le jugement dernier</h4>
+                </a>
+            
+                <a href="creation-adam.html">
+                    <h4>- La Création d’Adam</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
     <a href="frise.html">
         <button
