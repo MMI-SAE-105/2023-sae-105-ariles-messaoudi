@@ -1,0 +1,11 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.menu{
+    position: fixed;
+    inset: 0;
+    background-color: #BB1313;
+}
