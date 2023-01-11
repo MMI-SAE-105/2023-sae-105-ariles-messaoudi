@@ -125,4 +125,14 @@ h5{
     line-height: 28px;
     font-style: normal;
     text-align: left;
+    color: #CEB428;
+}
+
+.main-foot{
+    background-color: #BB1313;
+    width: 100%;
+}
+
+.icone{
+    display: inline-block;
 }
