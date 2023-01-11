@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/carrousel.css">
     <title>La Transfiguration</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <h1>Renaissance Italienne</h1>
-        </a>
-    </header>
+    <header class="main-head">
+        <div class="headder-text">
+            <a href="index.html">
+        <h1>Renaissance </br>Italienne</h1>
+        </div>
+    </a>
+</header>
 
-    <h2>La Transfiguration (1480)</h2>
+    <h2>La Transfiguration </br></br>(1480)</h2>
+
+    <div class="image-portrait">
+        <img src="public/img/carrousel/bellini2 1.webp" alt="La Transfiguration de Giovanni Bellini">
+    </div>
 
     <p>La Transfiguration du Christ est une peinture à l'huile sur panneau réalisée au début des années 1480 
         par le peintre italien de la Renaissance Giovanni Bellini. L'œuvre est conservée au musée de Capodimonte à Naples.
@@ -25,25 +40,45 @@
         Les feuilles de l'arbre sur la droite, ainsi que les visages de Jacques et Pierre, sont postérieures à la restauration.
     </p>
 
-    <h3>L'artiste</h3>
+    <div class="accordeon">
+        <section>
+          <div x-data="{ open: false }">
+            <button class="favorite styled" @click="open = ! open">
+                <div class="texte-bouton">L'artiste</button>
+         
+            <span x-show="open" x-transition>
+                <a href="giovanni-bellini.html">
+                    <h4>Giovanni Bellini</h4>
+                </a>
+            </span>
+        </div>
+        </section>
 
-    <a href="giovanni-bellini.html">
-        <h4>Giovanni Bellini</h4>
-    </a>
 
-    <h3>Autres oeuvres de l’artiste</h3>
+        <div class="accordeon">
+            <section>
+              <div x-data="{ open: false }">
+                <button class="favorite styled" @click="open = ! open">
+                    <div class="texte-bouton">Autres oeuvres de l’artiste</button>
+             
+                <span x-show="open" x-transition>
+                    <a href="saint-marc.html">
+                        <h4>- Saint Marc prêchant à Alexandrie</h4>
+                    </a>
+                </span>
+            </div>
+            </section>
 
-    <a href="saint-marc.html">
-        <h4>- Saint Marc prêchant à Alexandrie</h4>
-    </a>
+            <a href="frise.html">
+                <button class="favorite styled"
+                type="button">
+                <div class="texte-bouton">
+                    Frise
+                </div>
+                </button>
+            </a>
 
-    <a href="frise.html">
-        <button
-        type="button">
-            Frise
-        </button>
-    </a>
-
+            
     <footer>
         <a href="contact.html">
             <h2>Nous contacter</h2>
